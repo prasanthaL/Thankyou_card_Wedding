@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-cursive: var(--font-alex-brush), cursive;
+  --font-signature: var(--font-great-vibes), cursive;
+}
+
+:root {
+  --background: #fafaf9; /* Warm stone-50 */
+  --foreground: #1c1917; /* Stone-900 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Premium Gold Accent Styles */
+.gold-gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 25%,
+    #b38728 50%,
+    #fbf5b7 75%,
+    #aa771c 100%
+  );
+}
+
+.gold-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #aa771c 0%,
+    #cf9e3f 30%,
+    #fcf6ba 50%,
+    #cf9e3f 70%,
+    #aa771c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-premium {
+  border-image: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 25%,
+    #b38728 50%,
+    #fbf5b7 75%,
+    #aa771c 100%
+  ) 1;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Decorative Rose Petals Background Pattern */
+.bg-petals {
+  background-color: #fbfbfa;
+  background-image: radial-gradient(rgba(191, 149, 63, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-10px) rotate(5deg); opacity: 0.8; }
+  100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+}
+
+.animate-petal {
+  animation: float 6s ease-in-out infinite;
+}
+
