@@ -9,7 +9,7 @@ import ControlPanel from "@/components/ControlPanel";
 
 export default function Home() {
   // Main form and preview state
-  const [recipientName, setRecipientName] = useState("Elegant Wedding Planners & Coordinators");
+  const [recipientName, setRecipientName] = useState("");
   const [message, setMessage] = useState(
     "We appreciate the excellent service you provided in successfully organizing our wedding, which was held on 25.06.2026. We are especially grateful to you for the friendly and responsible manner of your staff, which made our work a success. Thank you for that."
   );
@@ -131,11 +131,8 @@ export default function Home() {
             message={message}
             setMessage={setMessage}
             weddingDate={weddingDate}
-            setWeddingDate={setWeddingDate}
             brideName={brideName}
-            setBrideName={setBrideName}
             groomName={groomName}
-            setGroomName={setGroomName}
             photo={photo}
             setPhoto={setPhoto}
             theme={theme}

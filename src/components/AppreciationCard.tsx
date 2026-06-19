@@ -170,7 +170,7 @@ export default function AppreciationCard({
 
       {/* Content Area */}
       <div className="relative z-10 flex flex-col h-full justify-between items-center py-6 px-4">
-        
+
         {/* 1. Couple Portrait Frame */}
         <div className="relative w-full flex justify-center mb-1">
           <div className="relative w-[180px] h-[180px] rounded-full overflow-hidden border-4 border-double border-[#dfba6b] shadow-xl bg-stone-100 flex items-center justify-center">
@@ -267,11 +267,10 @@ export default function AppreciationCard({
               </span>
             ) : (
               <span
-                className={`text-[20px] leading-tight block mt-1 select-text truncate ${
-                  signatureStyle === "signature"
+                className={`text-[20px] leading-tight block mt-1 select-text truncate ${signatureStyle === "signature"
                     ? "font-signature text-[#dfba6b]"
                     : "font-cursive " + style.textColorPrimary
-                }`}
+                  }`}
               >
                 {brideName || "Bride"} & {groomName || "Groom"}
               </span>

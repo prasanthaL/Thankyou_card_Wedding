@@ -9,11 +9,8 @@ interface ControlPanelProps {
   message: string;
   setMessage: (val: string) => void;
   weddingDate: string;
-  setWeddingDate: (val: string) => void;
   brideName: string;
-  setBrideName: (val: string) => void;
   groomName: string;
-  setGroomName: (val: string) => void;
   photo: string;
   setPhoto: (val: string) => void;
   theme: "gold-ivory" | "emerald-gold" | "midnight-gold" | "blush-rose";
@@ -40,11 +37,8 @@ export default function ControlPanel({
   message,
   setMessage,
   weddingDate,
-  setWeddingDate,
   brideName,
-  setBrideName,
   groomName,
-  setGroomName,
   photo,
   setPhoto,
   theme,
@@ -276,42 +270,31 @@ export default function ControlPanel({
         />
       </div>
 
-      {/* Wedding Details Inputs */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4">
+      {/* Wedding Details (Read-Only) */}
+      <div className="grid grid-cols-3 gap-4">
         <div>
           <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
             Bride Name
           </label>
-          <input
-            type="text"
-            value={brideName}
-            onChange={(e) => setBrideName(e.target.value)}
-            className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-          />
+          <div className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-900/50 text-zinc-700 dark:text-zinc-300">
+            {brideName}
+          </div>
         </div>
-
         <div>
           <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
             Groom Name
           </label>
-          <input
-            type="text"
-            value={groomName}
-            onChange={(e) => setGroomName(e.target.value)}
-            className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-          />
+          <div className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-900/50 text-zinc-700 dark:text-zinc-300">
+            {groomName}
+          </div>
         </div>
-
         <div>
           <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
             Wedding Date
           </label>
-          <input
-            type="date"
-            value={weddingDate}
-            onChange={(e) => setWeddingDate(e.target.value)}
-            className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
-          />
+          <div className="w-full px-3 py-2 text-sm rounded-lg border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-900/50 text-zinc-700 dark:text-zinc-300">
+            {weddingDate}
+          </div>
         </div>
       </div>
 
