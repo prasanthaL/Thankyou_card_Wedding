@@ -49,8 +49,8 @@ export default function Home() {
     const handleResizeWidth = (width: number) => {
       // Available width is the container width minus padding (e.g. 48px)
       const scale = (width - 48) / 640;
-      // Limit scale to a range of 0.35 to 0.95
-      setPreviewScale(Math.max(0.35, Math.min(scale, 0.95)));
+      // Limit scale to a range of 0.30 to 0.95
+      setPreviewScale(Math.max(0.3, Math.min(scale, 0.95)));
     };
 
     // Initial measurement
@@ -118,13 +118,11 @@ export default function Home() {
   return (
     <div className="flex-1 flex flex-col w-full min-h-screen bg-stone-50 dark:bg-zinc-950 transition-colors duration-300">
       {/* Premium Header */}
-
-
       {/* Main Workspace */}
-      <main className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 lg:p-8 max-w-[1600px] mx-auto w-full">
+      <main className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 p-4 sm:p-6 lg:p-8 max-w-[1600px] mx-auto w-full">
 
         {/* Left column: Controls Forms (5 cols) */}
-        <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-start">
+        <div className="md:col-span-5 order-2 md:order-1 flex flex-col justify-start">
           <ControlPanel
             recipientName={recipientName}
             setRecipientName={setRecipientName}
@@ -155,7 +153,7 @@ export default function Home() {
         </div>
 
         {/* Right column: Interactive Premium Live Preview (7 cols) */}
-        <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col items-center justify-start lg:sticky lg:top-[100px] self-start py-6 lg:py-0 w-full">
+        <div className="md:col-span-7 order-1 md:order-2 flex flex-col items-center justify-start md:sticky md:top-[90px] self-start py-4 md:py-0 w-full">
           <div className="text-center mb-6">
             <span className="text-xs uppercase font-semibold tracking-[4px] text-amber-600 dark:text-amber-500 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 fill-current" /> Interactive Live Preview

@@ -87,7 +87,7 @@ export default function ControlPanel({
     "We appreciate the excellent service you provided in successfully organizing our wedding, which was held on 25.06.2026. We are especially grateful to you for the friendly and responsible manner of your staff, which made our work a success. Thank you for that.";
 
   return (
-    <div className="w-full flex flex-col gap-6 p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-md">
+    <div className="w-full flex flex-col gap-6 p-4 sm:p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-md">
       <div>
         <h2 className="text-xl font-bold flex items-center gap-2 text-stone-800 dark:text-stone-100">
           <Sparkles className="w-5 h-5 text-amber-500" />
@@ -103,7 +103,7 @@ export default function ControlPanel({
         <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
           Card Theme
         </label>
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-4 gap-2">
           {[
             { id: "gold-ivory", name: "Gold & Ivory", color: "bg-white border-[#dfba6b] text-stone-800" },
             { id: "emerald-gold", name: "Royal Green", color: "bg-[#03221b] border-[#e5c17d] text-stone-100" },
@@ -162,7 +162,7 @@ export default function ControlPanel({
         {photo && (
           <div className="mt-4 flex flex-col gap-3 pt-3 border-t border-zinc-200/60 dark:border-zinc-800/80">
             <span className="text-[10px] uppercase font-bold text-zinc-400">Position & Scale Adjustments</span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-3">
               {/* Zoom slider */}
               <div>
                 <div className="flex justify-between text-xs text-zinc-500 mb-1">
@@ -271,7 +271,7 @@ export default function ControlPanel({
       </div>
 
       {/* Wedding Details (Read-Only) */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-3">
         <div>
           <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
             Bride Name
@@ -299,7 +299,7 @@ export default function ControlPanel({
       </div>
 
       {/* Signature & QR Options */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4">
         <div>
           <label className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 block">
             Signature Font Style
